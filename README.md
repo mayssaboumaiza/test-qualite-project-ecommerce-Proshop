@@ -135,19 +135,23 @@ Copier le code
 ```bash
 git clone https://github.com/USERNAME/NOM_DU_DEPOT.git
 cd NOM_DU_DEPOT
+
 Backend
 bash
 Copier le code
 cd backend
 npm install
 npm run dev
+
 Frontend
 bash
 Copier le code
 cd frontend
 npm install
 npm start
-9. Exécution des tests
+
+## 9. Exécution des tests automatisées
+
 Tests unitaires (Jest)
 bash
 Copier le code
@@ -163,8 +167,8 @@ Copier le code
 npx cypress run
 
 
+## 10. Objectifs pédagogiques atteints
 
-10. Objectifs pédagogiques atteints
 Ce projet démontre la maîtrise de :
 
 L’ingénierie des tests
@@ -179,7 +183,8 @@ La traçabilité des exigences
 
 Le travail sur une application full stack réelle
 
-12. Auteur
+## 12. Auteur
+
 Nom : Mayssa Boumaiza
 Matière : Test et Qualité Logicielle
 Année universitaire : 2025–2026
