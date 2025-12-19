@@ -161,14 +161,8 @@ ou
 bash
 Copier le code
 npx cypress run
-10. Sécurité & bonnes pratiques
-Les fichiers sensibles (.env) ne sont pas versionnés
 
-Les dépendances (node_modules) sont ignorées
 
-Les rapports générés automatiquement sont exclus du dépôt
-
-Respect des bonnes pratiques Git
 
 11. Objectifs pédagogiques atteints
 Ce projet démontre la maîtrise de :
@@ -188,4 +182,4 @@ Le travail sur une application full stack réelle
 12. Auteur
 Nom : Mayssa Boumaiza
 Matière : Test et Qualité Logicielle
-Année universitaire : 2024–2025
+Année universitaire : 2025–2026
