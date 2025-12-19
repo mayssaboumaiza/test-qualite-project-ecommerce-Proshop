@@ -1,127 +1,191 @@
-# ProShop eCommerce Platform
+# Projet Test & Qualité – Application Full Stack E-Commerce
 
-> eCommerce platform built with the MERN stack & Redux.
+## 1. Contexte académique
+Ce projet a été réalisé dans le cadre de la matière **Test et Qualité Logicielle**.  
+L’objectif principal est de mettre en pratique les concepts de **tests logiciels**, **assurance qualité**, **traçabilité**, et **automatisation des tests** sur une application **full stack**.
 
-### THIS PROJECT IS DEPRECATED
-This project is no longer supported. The new project/course has been released. The code has been cleaned up and now uses Redux Toolkit. You can find the new version [HERE](https://github.com/bradtraversy/proshop-v2)
+Le projet couvre l’ensemble du cycle de test :
+- Planification
+- Conception des cas de test
+- Exécution des tests manuels et automatisés
+- Suivi via outils professionnels
+- Clôture et reporting
 
-![screenshot](https://github.com/bradtraversy/proshop_mern/blob/master/uploads/Screen%20Shot%202020-09-29%20at%205.50.52%20PM.png)
+---
 
-## Features
+## 2. Description du projet
+Il s’agit d’une application **E-commerce full stack** permettant :
+- La gestion des utilisateurs (authentification, rôles)
+- La gestion des produits
+- La gestion des commandes
+- Les opérations CRUD
+- La sécurisation via JWT
 
-- Full featured shopping cart
-- Product reviews and ratings
-- Top products carousel
-- Product pagination
-- Product search feature
-- User profile with orders
-- Admin product management
-- Admin user management
-- Admin Order details page
-- Mark orders as delivered option
-- Checkout process (shipping, payment method, etc)
-- PayPal / credit card integration
-- Database seeder (products & users)
+Le projet sert de **support applicatif** pour l’implémentation des activités de test.
 
-## Note on Issues
-Please do not post issues here that are related to your own code when taking the course. Add those in the Udemy Q/A. If you clone THIS repo and there are issues, then you can submit
+---
 
-## Usage
+## 3. Architecture technique
 
-### ES Modules in Node
+### Backend
+- **Node.js**
+- **Express.js**
+- **MongoDB**
+- **JWT Authentication**
+- Architecture MVC
 
-We use ECMAScript Modules in the backend in this project. Be sure to have at least Node v14.6+ or you will need to add the "--experimental-modules" flag.
+### Frontend
+- **React**
+- **Redux**
+- **Bootstrap**
 
-Also, when importing a file (not a package), be sure to add .js at the end or you will get a "module not found" error
+### Base de données
+- **MongoDB** (locale ou via MongoDB Atlas)
 
-You can also install and setup Babel if you would like
+---
 
-### Env Variables
+## 4. Outils et technologies de test
 
-Create a .env file in then root and add the following
+### Tests manuels
+- **Postman**
+  - Tests des API REST
+  - Vérification des réponses HTTP
+  - Tests des scénarios fonctionnels
 
-```
-NODE_ENV = development
-PORT = 5000
-MONGO_URI = your mongodb uri
-JWT_SECRET = 'abc123'
-PAYPAL_CLIENT_ID = your paypal client id
-```
+### Tests automatisés
+- **Cypress**
+  - Tests End-to-End (E2E)
+  - Scénarios utilisateurs réels
+  - Captures d’écran et rapports
 
-### Install Dependencies (frontend & backend)
+- **Jest + React Testing Library**
+  - Tests unitaires frontend
+  - Tests des composants React
 
-```
+### Gestion de projet & tests
+- **Jira**
+- **Xray**
+  - Gestion des exigences
+  - Gestion des cas de test
+  - Exécution des tests
+  - Traçabilité
+
+---
+
+## 5. Types de tests réalisés
+
+- Tests unitaires
+- Tests d’intégration
+- Tests End-to-End (E2E)
+- Tests API
+- Tests fonctionnels manuels
+- Tests de régression
+
+---
+
+## 6. Documentation de test
+
+Les documents suivants sont inclus dans le projet :
+
+- 📄 **Plan de test**
+- 📄 **Cas de test détaillés**
+- 📊 **Matrice de traçabilité bidirectionnelle**
+- 📄 **Rapport de clôture des tests**
+- 📦 **Collection Postman**
+- 📸 **Captures d’écran Cypress**
+- 📄 **Exports Jira / Xray**
+
+---
+
+## 7. Structure du projet
+
+.
+├── backend/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── middleware/
+│ ├── tests/ # Tests unitaires backend
+│ └── server.js
+│
+├── frontend/
+│ ├── src/
+│ ├── cypress/ # Tests E2E Cypress
+│ ├── coverage/ # Rapports de couverture (local)
+│ └── package.json
+│
+├── cypress/ # Tests E2E globaux
+├── README.md
+├── .gitignore
+└── package.json
+
+yaml
+Copier le code
+
+---
+
+## 8. Installation et exécution
+
+### Prérequis
+- Node.js
+- MongoDB
+- Git
+
+### Cloner le projet
+```bash
+git clone https://github.com/USERNAME/NOM_DU_DEPOT.git
+cd NOM_DU_DEPOT
+Backend
+bash
+Copier le code
+cd backend
 npm install
-cd frontend
-npm install
-```
-
-### Run
-
-```
-# Run frontend (:3000) & backend (:5000)
 npm run dev
-
-# Run backend only
-npm run server
-```
-
-## Build & Deploy
-
-```
-# Create frontend prod build
+Frontend
+bash
+Copier le code
 cd frontend
-npm run build
-```
+npm install
+npm start
+9. Exécution des tests
+Tests unitaires (Jest)
+bash
+Copier le code
+npm test
+Tests E2E (Cypress)
+bash
+Copier le code
+npx cypress open
+ou
 
-There is a Heroku postbuild script, so if you push to Heroku, no need to build manually for deployment to Heroku
+bash
+Copier le code
+npx cypress run
+10. Sécurité & bonnes pratiques
+Les fichiers sensibles (.env) ne sont pas versionnés
 
-### Seed Database
+Les dépendances (node_modules) sont ignorées
 
-You can use the following commands to seed the database with some sample users and products as well as destroy all data
+Les rapports générés automatiquement sont exclus du dépôt
 
-```
-# Import data
-npm run data:import
+Respect des bonnes pratiques Git
 
-# Destroy data
-npm run data:destroy
-```
+11. Objectifs pédagogiques atteints
+Ce projet démontre la maîtrise de :
 
-```
-Sample User Logins
+L’ingénierie des tests
 
-admin@example.com (Admin)
-123456
+L’automatisation des tests
 
-john@example.com (Customer)
-123456
+Les outils professionnels de QA
 
-jane@example.com (Customer)
-123456
-```
+La documentation de test
 
+La traçabilité des exigences
 
-## License
+Le travail sur une application full stack réelle
 
-The MIT License
-
-Copyright (c) 2020 Traversy Media https://traversymedia.com
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
+12. Auteur
+Nom : Mayssa Boumaiza
+Matière : Test et Qualité Logicielle
+Année universitaire : 2024–2025
