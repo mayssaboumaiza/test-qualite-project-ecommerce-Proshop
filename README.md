@@ -164,7 +164,7 @@ npx cypress run
 
 
 
-11. Objectifs pédagogiques atteints
+10. Objectifs pédagogiques atteints
 Ce projet démontre la maîtrise de :
 
 L’ingénierie des tests
